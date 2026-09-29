@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Junzhe Lu</title>
-<meta name="description" content="Junzhe Lu — M.S. student at Tsinghua University. Research on simulation-ready 3D asset generation and human-centric perception and generation." />
+<meta name="description" content="Junzhe Lu — Master's student in Artificial Intelligence at Tsinghua University. Research on interactive 3D asset generation, physical validation, robot simulation, and human-centric generative modeling." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,6 +65,7 @@
   .role{font-size:16.5px; margin:0 0 4px;}
   .role .at{color:var(--accent);}
   .sub{color:var(--muted); font-size:15px; margin:0 0 20px;}
+  .bio{font-size:15px; line-height:1.75; margin:0 0 22px;}
   .interests{display:flex; flex-wrap:wrap; gap:8px; margin:0 0 22px;}
   .tag{font-family:var(--mono); font-size:12px; color:var(--ink);
     background:var(--accent-bg); border:1px solid var(--hair); padding:4px 10px; border-radius:100px;}
@@ -101,6 +102,9 @@
   .entry .when{font-family:var(--mono); font-size:12.5px; color:var(--faint); white-space:nowrap;}
   .entry .detail{color:var(--muted); font-size:14.5px; margin-top:2px;}
   .entry .detail .gpa{font-family:var(--mono); font-size:12.5px; color:var(--ink);}
+  .entry .contributions{color:var(--muted); font-size:14.5px; margin:8px 0 0; padding-left:20px;}
+  .entry .contributions li{margin:5px 0;}
+  @media (max-width:620px){ .entry .line1{flex-wrap:wrap; gap:2px 16px;} }
 
   /* ---------- publications ---------- */
   .grp-label{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
@@ -122,6 +126,7 @@
   .pub .title{font-weight:600; font-size:16px; line-height:1.4;}
   .pub .authors{font-size:14px; color:var(--muted); margin-top:3px;}
   .pub .authors .me{color:var(--ink); font-weight:600;}
+  .pub .summary{font-size:14px; color:var(--muted); margin:10px 0 0;}
   .pub .meta{margin-top:8px; display:flex; flex-wrap:wrap; gap:7px; align-items:center;}
   .venue{font-family:var(--mono); font-size:11.5px; font-weight:500;
     color:var(--accent); background:var(--accent-bg); padding:2px 9px; border-radius:5px;}
@@ -179,12 +184,14 @@
     <div class="hero reveal">
       <div>
         <h1>Junzhe Lu</h1>
-        <p class="role">M.S. student at <span class="at">Tsinghua University</span></p>
+        <p class="role">Master's student in Artificial Intelligence at <span class="at">Tsinghua University</span></p>
         <p class="sub">3D Foundation Model Algorithm Intern @ ByteDance Seed Vision Research</p>
         <div class="interests">
-          <span class="tag">Simulation-Ready 3D Asset Generation</span>
+          <span class="tag">Interactive 3D Asset Generation</span>
+          <span class="tag">Physics &amp; Robot Simulation</span>
           <span class="tag">Human-centric Perception &amp; Generation</span>
         </div>
+        <p class="bio">I develop models and systems that turn static 3D geometry into movable objects with realistic physical behavior. My research focuses on 3D generation and physics-based simulation for embodied AI. I also study generative models for human pose and motion.</p>
         <div class="links">
           <a href="mailto:junzhelu.thu@gmail.com"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a>
           <a href="https://scholar.google.com/citations?user=907PxdcAAAAJ" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 3 2 9l10 6 10-6-10-6Z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg>Google Scholar</a>
@@ -203,13 +210,14 @@
     <h2 class="sec-head">News</h2>
     <!-- Edit dates/text freely. Newest on top. -->
     <ul class="news">
+      <li><span class="date">2026.09</span><span class="what">Awarded the <b>2026 National Scholarship for Graduate Students</b>.</span></li>
       <li><span class="date">2026.07</span><span class="what"><b>ArtiAtlas</b> accepted to <b>SIGGRAPH Asia 2026</b>.</span></li>
       <li><span class="date">2026.04</span><span class="what"><b>Seed3D 2.0</b> released by <b>ByteDance Seed</b>.</span></li>
       <li><span class="date">2026.01</span><span class="what"><b>ViMoGen</b> and <b>EchoMotion</b> accepted to <b>ICLR 2026</b>.</span></li>
       <li><span class="date">2025.10</span><span class="what">Our paper on <b>consistency models</b> was published in <b>IEEE TAI</b>.</span></li>
       <li><span class="date">2025.08</span><span class="what">Started as a 3D Foundation Model Algorithm Intern at <b>ByteDance Seed</b>.</span></li>
       <li><span class="date">2025.07</span><span class="what"><b>NOVA3D</b> selected as an <b>ICME 2025</b> Best Paper Candidate (15/3737).</span></li>
-      <li><span class="date">2025.06</span><span class="what"><b>DPoser-X</b> accepted to <b>ICCV 2025</b> as an <b>Oral</b> (64/11,239).</span></li>
+      <li><span class="date">2025.06</span><span class="what"><b>DPoser-X</b> accepted to <b>ICCV 2025</b> as an <b>Oral</b> (64 of 11,239 submissions; <b>0.57%</b>).</span></li>
     </ul>
   </section>
 
@@ -217,29 +225,31 @@
   <section id="publications" class="reveal">
     <h2 class="sec-head">Publications</h2>
 
-    <div class="grp-label">Technical Reports</div>
-
-    <div class="pub">
-      <div class="thumb"><img src="assets/seed3d_2.png" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
-      <div>
-        <div class="title"><a href="https://seed.bytedance.com/en/seed3d_2_0" target="_blank" rel="noopener">Seed3D 2.0: Advancing High-Fidelity Simulation-Ready 3D Content Generation</a></div>
-        <div class="authors">Seed 3D Team — <span class="me">Junzhe Lu</span> (Contributor)</div>
-        <div class="meta"><span class="venue">Tech Report 2026</span><span class="badge report">ByteDance Seed</span></div>
-        <div class="plinks">
-          <a href="https://seed.bytedance.com/en/seed3d_2_0" target="_blank" rel="noopener">Project</a>
-          <a href="https://arxiv.org/abs/2605.13862" target="_blank" rel="noopener">Paper</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="grp-label">Selected Publications</div>
+    <div class="grp-label">Featured Publications</div>
 
     <div class="pub">
       <div class="thumb"><img src="assets/artiatlas.jpeg" alt="ArtiAtlas teaser" loading="lazy" decoding="async" onerror="this.remove()"></div>
       <div>
-        <div class="title">ArtiAtlas A Holistic Ecosystem for Diverse 3D Articulation Modeling</div>
+        <div class="title">ArtiAtlas: A Holistic Ecosystem for Diverse 3D Articulation Modeling</div>
         <div class="authors"><span class="me">Junzhe Lu</span>, Jing Lin, Ziang Cao, Haoqian Wang, Ziwei Liu, Jianfeng Zhang</div>
         <div class="meta"><span class="venue">SIGGRAPH Asia 2026</span><span class="badge report">To Appear</span></div>
+        <p class="summary">Builds the data curation and annotation pipeline, develops ArtiPipe for automatic joint annotation, and designs and trains Artisan to recover articulated structures from static meshes.</p>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="thumb"><video autoplay muted loop playsinline preload="metadata" aria-label="DPoser-X preview"><source src="assets/dposerx.mp4" type="video/mp4"></video></div>
+      <div>
+        <div class="title"><a href="https://dposer.github.io/" target="_blank" rel="noopener">DPoser-X: Diffusion Model as Robust 3D Whole-body Human Pose Prior</a></div>
+        <div class="authors"><span class="me">Junzhe Lu*</span>, Jing Lin*, Hongkun Dou, Ailing Zeng, Yue Deng, Xian Liu, Zhongang Cai, Lei Yang, Yulun Zhang, Haoqian Wang, Ziwei Liu</div>
+        <div class="meta"><span class="venue">ICCV 2025</span><a class="badge oral" href="https://media.eventhosts.cc/Conferences/ICCV2025/iccv25_main_program.pdf" target="_blank" rel="noopener" title="ICCV 2025 official program: 64 oral papers out of 11,239 valid submissions (page 3)">Oral · 64/11,239 submissions · 0.57%</a></div>
+        <p class="summary">Develops a diffusion-based 3D whole-body pose prior from whole-body and part-specific pose data. Supports pose generation, human mesh recovery, and pose completion.</p>
+        <div class="plinks">
+          <a href="https://dposer.github.io/" target="_blank" rel="noopener">Project</a>
+          <a href="https://github.com/moonbow721/DPoser-X" target="_blank" rel="noopener">Code</a>
+          <a href="https://arxiv.org/abs/2508.00599" target="_blank" rel="noopener">arXiv</a>
+          <a href="https://openaccess.thecvf.com/content/ICCV2025/html/Lu_DPoser-X_Diffusion_Model_as_Robust_3D_Whole-body_Human_Pose_Prior_ICCV_2025_paper.html" target="_blank" rel="noopener">PDF</a>
+        </div>
       </div>
     </div>
 
@@ -249,6 +259,7 @@
         <div class="title"><a href="https://motrixlab.github.io/2026_iclr_vimogen" target="_blank" rel="noopener">The Quest for Generalizable Motion Generation: Data, Model, and Evaluation</a></div>
         <div class="authors">Jing Lin*, Ruisi Wang*, <span class="me">Junzhe Lu*</span>, Ziqi Huang, Guorui Song, Ailing Zeng, Xian Liu, Chen Wei, Wanqi Yin, Qingping Sun, Zhongang Cai, Lei Yang, Ziwei Liu</div>
         <div class="meta"><span class="venue">ICLR 2026</span></div>
+        <p class="summary">Introduces the ViMoGen-228K dataset, a motion generator combining motion-capture and video-generation priors, and the MBench evaluation benchmark.</p>
         <div class="plinks">
           <a href="https://motrixlab.github.io/2026_iclr_vimogen" target="_blank" rel="noopener">Project</a>
           <a href="https://github.com/MotrixLab/ViMoGen" target="_blank" rel="noopener">Code</a>
@@ -256,6 +267,8 @@
         </div>
       </div>
     </div>
+
+    <div class="grp-label">Other Publications</div>
 
     <div class="pub">
       <div class="thumb"><video autoplay muted loop playsinline preload="metadata" aria-label="EchoMotion preview"><source src="assets/echomotion.mp4" type="video/mp4"></video></div>
@@ -277,21 +290,6 @@
         <div class="authors">Hongkun Dou, <span class="me">Junzhe Lu</span>, Jinyang Du, Chengwei Fu, Wen Yao, Hongjue Li, Yue Deng</div>
         <div class="meta"><span class="venue">IEEE TAI 2026</span></div>
         <div class="plinks"><a href="https://ieeexplore.ieee.org/abstract/document/11215765" target="_blank" rel="noopener">Paper</a></div>
-      </div>
-    </div>
-
-    <div class="pub">
-      <div class="thumb"><video autoplay muted loop playsinline preload="metadata" aria-label="DPoser-X preview"><source src="assets/dposerx.mp4" type="video/mp4"></video></div>
-      <div>
-        <div class="title"><a href="https://dposer.github.io/" target="_blank" rel="noopener">DPoser-X: Diffusion Model as Robust 3D Whole-body Human Pose Prior</a></div>
-        <div class="authors"><span class="me">Junzhe Lu*</span>, Jing Lin*, Hongkun Dou, Ailing Zeng, Yue Deng, Xian Liu, Zhongang Cai, Lei Yang, Yulun Zhang, Haoqian Wang, Ziwei Liu</div>
-        <div class="meta"><span class="venue">ICCV 2025</span><span class="badge oral">Oral · 64/11,239</span></div>
-        <div class="plinks">
-          <a href="https://dposer.github.io/" target="_blank" rel="noopener">Project</a>
-          <a href="https://github.com/moonbow721/DPoser-X" target="_blank" rel="noopener">Code</a>
-          <a href="https://arxiv.org/abs/2508.00599" target="_blank" rel="noopener">arXiv</a>
-          <a href="https://openaccess.thecvf.com/content/ICCV2025/html/Lu_DPoser-X_Diffusion_Model_as_Robust_3D_Whole-body_Human_Pose_Prior_ICCV_2025_paper.html" target="_blank" rel="noopener">PDF</a>
-        </div>
       </div>
     </div>
 
@@ -338,6 +336,22 @@
       </div>
     </div>
 
+    <div class="grp-label">Technical Reports</div>
+
+    <div class="pub">
+      <div class="thumb"><img src="assets/seed3d_2.png" alt="" loading="lazy" decoding="async" onerror="this.remove()"></div>
+      <div>
+        <div class="title"><a href="https://seed.bytedance.com/en/seed3d_2_0" target="_blank" rel="noopener">Seed3D 2.0: Advancing High-Fidelity Simulation-Ready 3D Content Generation</a></div>
+        <div class="authors">Seed 3D Team — <span class="me">Junzhe Lu</span> (Contributor)</div>
+        <div class="meta"><span class="venue">Tech Report 2026</span><span class="badge report">ByteDance Seed</span></div>
+        <p class="summary">Contributed data filtering and augmentation operators to the foundation-model data pipeline.</p>
+        <div class="plinks">
+          <a href="https://seed.bytedance.com/en/seed3d_2_0" target="_blank" rel="noopener">Project</a>
+          <a href="https://arxiv.org/abs/2605.13862" target="_blank" rel="noopener">Paper</a>
+        </div>
+      </div>
+    </div>
+
     <div class="eq">* denotes equal contribution.</div>
   </section>
 
@@ -346,11 +360,17 @@
     <h2 class="sec-head">Experience</h2>
     <div class="entry">
       <div class="line1"><span class="org">ByteDance Seed Vision Research</span><span class="when">Aug 2025 — Present</span></div>
-      <div class="detail">3D Foundation Model Algorithm Intern · China. Research on simulation-ready 3D asset generation — data and model pipelines for high-fidelity 3D content generation.</div>
+      <div class="detail">3D Foundation Model Algorithm Intern · China</div>
+      <ul class="contributions">
+        <li>Research and engineering on 3D generation and physics-based simulation for embodied AI.</li>
+      </ul>
     </div>
     <div class="entry">
       <div class="line1"><span class="org">Meshcapade</span><span class="when">Aug 2024 — Feb 2025</span></div>
-      <div class="detail">Machine Learning Engineer Intern · Germany (Remote). Built pipelines for human-video data collection, cleaning, and processing to support generation-model training.</div>
+      <div class="detail">Machine Learning Engineer Intern · Germany (Remote)</div>
+      <ul class="contributions">
+        <li>Built human-video and SMPL-X motion data pipelines for video-generation and motion-capture training, covering collection, cleaning, motion processing, annotation, and rendering.</li>
+      </ul>
     </div>
   </section>
 
@@ -358,28 +378,29 @@
   <section id="education" class="reveal">
     <h2 class="sec-head">Education</h2>
     <div class="entry">
-      <div class="line1"><span class="org">Tsinghua University</span><span class="when">Oct 2024 — Present</span></div>
-      <div class="detail">M.S. in Electronic Information · <span class="gpa">GPA 3.96 / 4.0</span> · Advisor: <a href="https://www.sigs.tsinghua.edu.cn/whq_en/main.psp" target="_blank" rel="noopener">Haoqian Wang</a></div>
+      <div class="line1"><span class="org">Tsinghua University</span><span class="when">Aug 2024 — Present</span></div>
+      <div class="detail">Master's degree in Artificial Intelligence · <span class="gpa">GPA 4.0 / 4.0</span> · Expected graduation: Jul 2027<br>Advisor: <a href="https://www.sigs.tsinghua.edu.cn/whq_en/main.psp" target="_blank" rel="noopener">Haoqian Wang</a></div>
     </div>
     <div class="entry">
-      <div class="line1"><span class="org">Beihang University</span><span class="when">Oct 2020 — Jun 2024</span></div>
-      <div class="detail">B.S. in Aircraft Control and Information Engineering · <span class="gpa">GPA 3.89 / 4.0</span> · Advisor: <a href="https://shi.buaa.edu.cn/yuedeng/en/index.htm" target="_blank" rel="noopener">Yue Deng</a></div>
+      <div class="line1"><span class="org">Beihang University</span><span class="when">Sep 2020 — Jun 2024</span></div>
+      <div class="detail">Bachelor's degree in Aircraft Control and Information Engineering · <span class="gpa">GPA 3.89 / 4.0</span> · Advisor: <a href="https://shi.buaa.edu.cn/yuedeng/en/index.htm" target="_blank" rel="noopener">Yue Deng</a></div>
     </div>
   </section>
 
   <!-- ===================== HONORS ===================== -->
   <section id="honors" class="reveal">
     <h2 class="sec-head">Honors &amp; Awards</h2>
+    <div class="honor"><span class="name"><b>National Scholarship for Graduate Students</b></span><span class="yr">2026</span></div>
     <div class="honor"><span class="name"><b>National Scholarship</b></span><span class="yr">2021, 2022</span></div>
     <div class="honor"><span class="name"><b>Special Prize</b>, Academic Competition Scholarship</span><span class="yr">2022, 2023</span></div>
     <div class="honor"><span class="name"><b>Meritorious Winner</b>, Mathematical Contest in Modeling (MCM)</span><span class="yr">2023</span></div>
-    <div class="honor"><span class="name"><b>Second Prize</b>, Contemporary Undergraduate Mathematical Contest in Modeling (CUMCM), Finals</span><span class="yr">2022</span></div>
+    <div class="honor"><span class="name"><b>Second Prize</b>, Contemporary Undergraduate Mathematical Contest in Modeling (CUMCM), Undergraduate Group</span><span class="yr">2022</span></div>
     <div class="honor"><span class="name"><b>First Prize</b>, Chinese Mathematics Competitions for College Students (CMC)</span><span class="yr">2021</span></div>
   </section>
 
 </main>
 
-<footer class="wrap">© <span id="year"></span> Junzhe Lu · Built with HTML &amp; CSS · Last updated Jun 2026</footer>
+<footer class="wrap">© <span id="year"></span> Junzhe Lu · Built with HTML &amp; CSS · Last updated Sep 2026</footer>
 
 <script>
   // theme: system default, manual toggle, persisted when deployed (guarded for sandbox)
